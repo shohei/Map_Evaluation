@@ -1,4 +1,13 @@
-## Map Evaluator
+# Map Evaluator
+
+## How to run
+
+```
+$ python map_evaluator.py <input_file>
+```
+
+
+## Original README.md
 
 Edit the map_evaluation.py at ```line 70``` and input the paths to the images. The first map is the generated map while the second path denotes the standard map
 
