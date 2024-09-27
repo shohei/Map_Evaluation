@@ -61,7 +61,8 @@ def main(generated_map_path, standard_map_path, ssim_threshold=0.8, mse_threshol
     ssim_value, mse_value = quality_metrics(aligned_map, standard_map)
 
     #print(f"SSIM: {ssim_value}, MSE: {mse_value}")
-    print(f"Similarity: {ssim_value}")
+    score = ssim_value*10
+    print("Similarity: {:.2f}".format(score))
     
     #if ssim_value > ssim_threshold and mse_value < mse_threshold:
     #    print("Map quality acceptable")
