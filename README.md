@@ -5,6 +5,12 @@
 ```
 $ python map_evaluator.py <input_file>
 ```
+Sample usage
+
+```
+$ ./map_evaluation.py maps/ipic_save.pgm
+Similarity: 0.684662940491147
+```
 
 
 ## Original README.md
