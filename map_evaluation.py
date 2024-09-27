@@ -3,6 +3,7 @@
 import cv2
 import numpy as np
 from skimage.metrics import structural_similarity as ssim
+import sys
 
 def preprocess_image(image_path):
     img = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
@@ -67,4 +68,9 @@ def main(generated_map_path, standard_map_path, ssim_threshold=0.8, mse_threshol
         print("Map quality unacceptable")
 
 if __name__ == "__main__":
-    main('maps/sim2_save.pgm', 'maps/sim1_save.pgm')
+    if len(sys.argv) != 2:
+        print("Usage: python map_evaluation.py <input_image>")
+        sys.exit(1)
+    Input = sys.argv[1]
+    Reference = 'maps/reference.jpg'
+    main(Reference, Input)
